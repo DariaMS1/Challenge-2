@@ -1,29 +1,22 @@
 :root {
   --HF-text: #7b50a3;
   --HF-bg: linear-gradient(to right, #dde99a, #f4ffb3, #dde99a);
+  --page-section: linear-gradient(to right, #b3ca30, #fbffe5, #98ad20);
+  --H-OL: #432261;
+  --H2-H6: #9fb812;
+  --H2-H6-BG: #f8ffce;
 }
+
 
 * {
   box-sizing: border-box;
+  background:rgb(255, 221, 255);
 }
 
-header {
-  margin-top: -8px;
-  position: fixed;
-  border-top: 4px solid;
-  border-bottom: 2px solid;
-  background: var(--HF-bg);
-  color: var(--HF-text);
-}
-#header-list {
-  list-style: none;
-}
-.list1 {
-  display: inline-block;
-  margin-right: 10px;
-}
 
 body {
+  display: flex;
+  flex-wrap: wrap;
   margin-left: 30px;
   margin-right: 30px;
   padding: 0;
@@ -33,18 +26,122 @@ body {
   border-right: 1px solid;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-left: 20px;
+
+header {
+  margin-top: -8px;
+  border-top: 4px solid;
+  border-bottom: 2px solid;
+  background: var(--HF-bg);
+  color: var(--HF-text);
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+.list1 {
+  list-style: none;
+  text-align: end;
+  display: inline;
+  margin-right: 10px;
+  text-decoration: none;
+  border: var(--HF-text) solid;
+  border-radius: 8%;
+  padding: 4%;
 }
 
-p {
-  margin: 0;
+
+h1 {
+  margin-left: 20px;
 }
+h2, h3, h5, h6 {
+  margin-left: 20px;
+  outline: var(--H-OL);
+  color: var(--H2-H6);
+  background: var(--H2-H6-BG);
+  padding: 4px;
+}
+
+
+p {
+  margin: 5px;
+}
+
+
+.hero-banner {
+  
+}
+
+
+#about {
+  grid-area: about;
+}
+#work {
+  grid-area: work;
+}
+#contact {
+  grid-area: contact;
+}
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 33% 50% 17%;
+  grid-template-areas: 
+  "about work contact"
+}
+#about, #work, #contact {
+  display: flex;
+  flex-wrap: wrap;
+}
+.page-section {
+  background: var(--page-section);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#about-img {
+  display: flex;
+  justify-content: center;
+}
+
+
+#work1 {
+  grid-area: work1;
+  background-image: url("../images/pigeon7.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#work2 {
+  grid-area: work2;
+  background-image: url("../images/pigeons1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#work3 {
+  grid-area: work3;
+  background-image: url("../images/pigeon5.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#grid {
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "work1 work1 work3"
+  "work1 work1 work3"
+  "work2 work2 work2";
+  gap: 10px;
+  margin-right: 30px;
+}
+.grid-txt {
+  display: flex;
+  flex-wrap: wrap;
+}
+.work-sub-list {
+  display: block;
+  list-style-type: circle;
+}
+
 
 footer {
   border-top: 2px solid;
@@ -55,7 +152,7 @@ footer {
   text-align: center;
   margin: auto
 }
-h3 {
+h4 {
   font-size: 15px;
 }
 #footer-list {

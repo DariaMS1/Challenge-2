@@ -5,12 +5,14 @@
   --H-OL: #432261;
   --H2-H6: #9fb812;
   --H2-H6-BG: #f8ffce;
+  --img-borders: #73d58a;
 }
 
 
 * {
   box-sizing: border-box;
   background:rgb(255, 221, 255);
+  background: transparent;
 }
 
 
@@ -28,28 +30,35 @@ body {
 
 
 header {
+  position: fixed;
+  margin-right: 30px;
   margin-top: -8px;
+  width: 100%;
   border-top: 4px solid;
   border-bottom: 2px solid;
   background: var(--HF-bg);
   color: var(--HF-text);
   display: flex;
-  justify-content: stretch;
   align-items: center;
 }
-.list1 {
+#header-list {
   list-style: none;
-  text-align: end;
-  display: inline;
   margin-right: 10px;
-  text-decoration: none;
+}
+.hdr-border-dets {
+  display: inline-block;
   border: var(--HF-text) solid;
   border-radius: 8%;
-  padding: 4%;
+}
+.hdr-a {
+  text-align: right;
+  text-decoration: none;
+  color: var(--HF-text);
 }
 
 
 h1 {
+  font-size: 40px;
   margin-left: 20px;
 }
 h2, h3, h5, h6 {
@@ -67,37 +76,32 @@ p {
 
 
 .hero-banner {
-  
+  text-align: center;
+}
+#hero-img {
+
 }
 
-
-#about {
-  grid-area: about;
-}
-#work {
-  grid-area: work;
-}
-#contact {
-  grid-area: contact;
-}
 .page-wrapper {
   display: grid;
   grid-template-columns: 33% 50% 17%;
   grid-template-areas: 
   "about work contact"
 }
-#about, #work, #contact {
-  display: flex;
-  flex-wrap: wrap;
-}
+
+
 .page-section {
   background: var(--page-section);
   margin-left: 10px;
   margin-right: 10px;
+  justify-content: center;
 }
 #about-img {
   display: flex;
   justify-content: center;
+  margin-top: 4px;
+  margin-left: 4px;
+  outline: var(--img-borders) solid 4px;
 }
 
 
@@ -107,6 +111,7 @@ p {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  outline: var(--img-borders) solid 4px;
 }
 #work2 {
   grid-area: work2;
@@ -114,6 +119,7 @@ p {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  outline: var(--img-borders) solid 4px;
 }
 #work3 {
   grid-area: work3;
@@ -121,6 +127,7 @@ p {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  outline: var(--img-borders) solid 4px;
 }
 #grid {
   display: grid;
@@ -136,6 +143,7 @@ p {
 .grid-txt {
   display: flex;
   flex-wrap: wrap;
+  font-size: 15px;
 }
 .work-sub-list {
   display: block;
@@ -143,7 +151,25 @@ p {
 }
 
 
+#about {
+  grid-area: about;
+}
+#work {
+  grid-area: work;
+}
+#contact {
+  grid-area: contact;
+}
+
+
+#contact-img {
+  outline: var(--img-borders) solid 4px;
+  
+}
+
+
 footer {
+  width: 100%;
   border-top: 2px solid;
   border-bottom: 4px solid;
   background: var(--HF-bg);
@@ -158,4 +184,9 @@ h4 {
 #footer-list {
   font-size: 10px;
   list-style: none;
+}
+
+
+@media screen {
+  
 }

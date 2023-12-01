@@ -6,6 +6,7 @@
   --H2-H6: #9fb812;
   --H2-H6-BG: #f8ffce;
   --img-borders: #73d58a;
+  --txt: rgb(237, 163, 232);
 }
 
 
@@ -18,7 +19,7 @@
 
 body {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin-left: 30px;
   margin-right: 30px;
   padding: 0;
@@ -30,7 +31,8 @@ body {
 
 
 header {
-  position: fixed;
+  position: sticky;
+  top: 0;
   margin-right: 30px;
   margin-top: -8px;
   width: 100%;
@@ -78,9 +80,7 @@ p {
 .hero-banner {
   text-align: center;
 }
-#hero-img {
 
-}
 
 .page-wrapper {
   display: grid;
@@ -130,6 +130,7 @@ p {
   outline: var(--img-borders) solid 4px;
 }
 #grid {
+  margin-left: 10px;
   display: grid;
   grid-template-columns: 25% 25% 50%;
   grid-template-rows: 1fr 1fr 1fr;
@@ -160,15 +161,19 @@ p {
 #contact {
   grid-area: contact;
 }
+#work p,li {
+  color: var(--txt);
+}
+#about
 
 
 #contact-img {
   outline: var(--img-borders) solid 4px;
-  
 }
 
 
 footer {
+  margin-top: 4px;
   width: 100%;
   border-top: 2px solid;
   border-bottom: 4px solid;

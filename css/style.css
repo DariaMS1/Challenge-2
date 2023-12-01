@@ -96,11 +96,10 @@ p {
   margin-right: 10px;
   justify-content: center;
 }
-#about-img {
-  display: flex;
-  justify-content: center;
+.about-img {
+  width: calc(98%);
   margin-top: 4px;
-  margin-left: 4px;
+  margin-left: 1%;
   outline: var(--img-borders) solid 4px;
 }
 
@@ -170,7 +169,20 @@ p {
 #contact-img {
   outline: var(--img-borders) solid 4px;
 }
-
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-box .contact-img {
+  outline: var(--img-borders) solid 4px;
+  width: calc(96%);
+  margin: 0 0 0;
+  margin-left: 2%;
+}
+.fit-nav {
+  font-size: calc(80%);
+  display: flex;
+}
 
 footer {
   margin-top: 4px;
@@ -192,6 +204,9 @@ h4 {
 }
 
 
-@media screen {
-  
+@media screen and (min-width= 768px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
 }
